@@ -1,7 +1,51 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "07939eb8-67f0-401d-ab79-cb70eaa6e1d3"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ming-angular-test-lib": {
+      "projectType": "library",
+      "root": "projects/ming-angular-test-lib",
+      "sourceRoot": "projects/ming-angular-test-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ming-angular-test-lib/tsconfig.lib.json",
+            "project": "projects/ming-angular-test-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ming-angular-test-lib/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ming-angular-test-lib/src/test.ts",
+            "tsConfig": "projects/ming-angular-test-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ming-angular-test-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ming-angular-test-lib/tsconfig.lib.json",
+              "projects/ming-angular-test-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ming-angular-test-lib"
 }

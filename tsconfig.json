@@ -9,6 +9,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ming-angular-test-lib": [
+        "dist/ming-angular-test-lib/ming-angular-test-lib",
+        "dist/ming-angular-test-lib"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,
