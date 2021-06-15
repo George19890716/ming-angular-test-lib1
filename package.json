@@ -1,6 +1,11 @@
 {
   "name": "ming-angular-test-lib1",
   "version": "0.0.0",
+  "author": "Xu, Ming",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/George19890716/ming-angular-test-lib1.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

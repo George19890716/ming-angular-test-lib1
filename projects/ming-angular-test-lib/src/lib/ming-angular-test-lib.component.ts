@@ -2,13 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'lib-ming-angular-test-lib',
-  template: `
-    <p>
-      ming-angular-test-lib works!
-    </p>
-  `,
-  styles: [
-  ]
+  templateUrl: './ming-angular-test-lib.html',
+  styles: ['./ming-angular-test-lib.less']
 })
 export class MingAngularTestLibComponent implements OnInit {
 
